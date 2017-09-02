@@ -9,7 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>springboot-kafka</module>
+        <module>spring-boot-sample-kafka</module>
+        <module>spring-boot-sample-tomcat-ssl</module>
+        <module>spring-boot-sample-jersey</module>
     </modules>
 
 

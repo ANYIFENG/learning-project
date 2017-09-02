@@ -27,20 +27,13 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.apache.httpcomponents</groupId>-->
-			<!--<artifactId>httpclient</artifactId>-->
-		<!--</dependency>-->
 		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.yaml</groupId>-->
-			<!--<artifactId>snakeyaml</artifactId>-->
-		<!--</dependency>-->
+
 	</dependencies>
 	<build>
 		<finalName>spring-boot-sample-tomcat-ssl</finalName>

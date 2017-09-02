@@ -33,7 +33,7 @@ public class Endpoint {
 
     @GET
     public String message() {
-        
+
         return "Hello " + this.service.message();
     }
 
