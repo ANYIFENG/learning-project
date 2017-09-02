@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring-boot-sample-jersey:war exploded">
+    <output-path>$PROJECT_DIR$/target/spring-boot-sample-jersey-2.0.0.BUILD-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring-boot-sample-jersey" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/spring-boot-sample-jersey-2.0.0.BUILD-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="spring-boot-sample-jersey/web/Web" />
+    </root>
+  </artifact>
+</component>

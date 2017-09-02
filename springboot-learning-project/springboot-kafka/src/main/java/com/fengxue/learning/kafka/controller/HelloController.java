@@ -16,8 +16,8 @@
 
 package com.fengxue.learning.kafka.controller;
 
+import com.fengxue.learning.kafka.configuration.KafkaProduceSender;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaProduceSender kafkaProduceSender;
 
     @RequestMapping("/hello")
     public String helloWorld() {
@@ -34,14 +34,13 @@ public class HelloController {
     }
 
     @RequestMapping("/produce/{count}")
-    public void produceMsg(@PathVariable("count")int count){
+    public void produceMsg(@PathVariable("count") int count) {
 
         System.out.println("send msg count: " + count);
-        for (int i=0; i< count; i++){
-            kafkaTemplate.send("test-topic", new Integer(i).toString());
+        for (int i = 0; i < count; i++) {
+            kafkaProduceSender.send(new Integer(i).toString());
         }
     }
-
 
 
 }

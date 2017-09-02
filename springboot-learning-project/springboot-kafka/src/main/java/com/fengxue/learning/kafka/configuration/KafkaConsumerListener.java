@@ -7,8 +7,9 @@ import java.util.Optional;
 
 public class KafkaConsumerListener {
 
-    @KafkaListener(topics = {"test-topic"})
+    @KafkaListener(topics = {KafkaConstant.TOPIC})
     public void listen(ConsumerRecord<?, ?> record) {
+
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
         if (kafkaMessage.isPresent()) {
             System.out.println(Thread.currentThread() + "  " + record);
